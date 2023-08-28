@@ -15,6 +15,11 @@ sealed class Screen(
     val unselectedIcon: ImageVector? = null,
     val label: String
 ) {
+    object Main : Screen(
+        route = "main",
+        label = "Main"
+    )
+
     object Home : Screen(
         route = "home",
         selectedIcon = Icons.Filled.Home,
@@ -22,11 +27,11 @@ sealed class Screen(
         label = "Home"
     )
 
-    object Collections : Screen(
-        route = "collections",
+    object Notifications : Screen(
+        route = "notifications",
         selectedIcon = Icons.Filled.Notifications,
         unselectedIcon = Icons.Outlined.Notifications,
-        label = "Collections"
+        label = "Notifications"
     )
 
     object Profile : Screen(
