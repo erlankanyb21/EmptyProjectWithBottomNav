@@ -8,6 +8,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.navigation.NavController
+import com.example.myapp.ui.nav_graph.AuthScreen
 import com.example.myapp.ui.nav_graph.Graph
 
 @Composable
@@ -19,7 +20,11 @@ fun LoginScreen(
         contentAlignment = Alignment.Center
     ) {
         Text(text = "Login", modifier = Modifier.clickable {
-            navController.navigate(Graph.HOME)
+            navController.navigate(Graph.HOME) {
+                popUpTo(AuthScreen.Login.route) {
+                    inclusive = true
+                }
+            }
         })
     }
 }

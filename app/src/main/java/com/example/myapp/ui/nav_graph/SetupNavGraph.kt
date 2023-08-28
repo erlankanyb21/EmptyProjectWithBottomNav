@@ -14,6 +14,8 @@ fun SetupNavGraph(navController: NavHostController) {
         startDestination = Graph.AUTHENTICATION
     ) {
         authNavGraph(navController)
+
+        // it's here cause we got another NavGraph
         composable(Graph.HOME) { MainScreen() }
     }
 }
