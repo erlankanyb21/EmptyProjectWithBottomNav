@@ -40,4 +40,9 @@ sealed class Screen(
         unselectedIcon = Icons.Outlined.Person,
         label = "Profile"
     )
+
+    object Stats : Screen(
+        route = "gallery",
+        label = "Gallery"
+    )
 }

@@ -32,8 +32,8 @@ fun MainScreen(navController: NavHostController = rememberNavController()) {
 fun BottomBar(navController: NavHostController) {
     val screens = listOf(
         Screen.Home,
-        Screen.Profile,
         Screen.Notifications,
+        Screen.Profile,
     )
     val navBackStackEntry by navController.currentBackStackEntryAsState()
     val currentDestination = navBackStackEntry?.destination

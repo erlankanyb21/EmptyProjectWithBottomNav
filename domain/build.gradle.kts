@@ -10,4 +10,7 @@ java {
 }
 
 dependencies {
+    implementation(libs.coroutine.coroutineCore)
+    implementation(libs.koin.core)
+    implementation(libs.paging.common)
 }
