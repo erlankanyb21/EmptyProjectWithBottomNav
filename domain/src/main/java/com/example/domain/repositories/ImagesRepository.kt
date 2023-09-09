@@ -6,6 +6,6 @@ import kotlinx.coroutines.flow.Flow
 interface ImagesRepository {
 
   suspend fun fetchPagingImages(
-  ) : Flow<List<Test>>
+  ) : List<Test>
 
 }

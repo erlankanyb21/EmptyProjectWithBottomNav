@@ -8,6 +8,8 @@ import androidx.compose.material3.Slider
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.mutableFloatStateOf
 import androidx.compose.runtime.remember
+import androidx.navigation.compose.rememberNavController
+import com.example.myapp.ui.nav_graph.SetupNavGraph
 import com.example.myapp.ui.screens.main.profile.VariantTwo
 
 class MainActivity : ComponentActivity() {
@@ -15,8 +17,8 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             MaterialTheme {
-//                SetupNavGraph(navController = rememberNavController())
-                Motion()
+                SetupNavGraph(navController = rememberNavController())
+
             }
         }
     }

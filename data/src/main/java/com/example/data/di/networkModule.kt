@@ -28,9 +28,13 @@ private fun createHttpClient() = HttpClient(OkHttp) {
     install(Logging) {
         level = LogLevel.ALL
     }
+
     install(ContentNegotiation) {
-        json()
+        gson {
+            this.setLenient()
+        }
     }
+
     engine {
         addInterceptor(HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BODY))
     }

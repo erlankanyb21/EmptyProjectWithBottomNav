@@ -10,3 +10,4 @@ data class TestUI(
     val ratingUI: RatingUI? = null,
     val title: String? = null
 )
+

@@ -1,15 +1,19 @@
 package com.example.myapp.ui.nav_graph
 
 import androidx.compose.runtime.Composable
+import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
+import com.example.myapp.MainViewModel
 import com.example.myapp.ui.Screen
 import com.example.myapp.ui.screens.main.MainScreen
 import com.example.myapp.ui.screens.main.home.HomeScreen
 import com.example.myapp.ui.screens.main.notification.NotificationScreen
 import com.example.myapp.ui.screens.main.profile.StatsScreen
 import com.example.myapp.ui.screens.main.profile.ProfileScreen
+import org.koin.androidx.compose.getViewModel
+import org.koin.androidx.compose.koinViewModel
 
 @Composable
 fun MainNavGraph(navController: NavHostController) {
