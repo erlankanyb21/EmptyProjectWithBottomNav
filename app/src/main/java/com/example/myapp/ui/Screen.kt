@@ -42,7 +42,43 @@ sealed class Screen(
     )
 
     object Stats : Screen(
+        route = "stats",
+        label = "stats"
+    )
+
+
+    object Anim : Screen(
+        route = "anim",
+        label = "anim"
+    )
+
+    object Exoplayer : Screen(
+        route = "exoplayer",
+        label = "exoplayer"
+    )
+
+    object PushNotification : Screen(
+        route = "PushNotification",
+        label = "PushNotification"
+    )
+
+    object Web : Screen(
+        route = "Web",
+        label = "Web"
+    )
+
+    object DragAndDrop : Screen(
+        route = "dragAndDrop",
+        label = "dragAndDrop"
+    )
+
+    object Gallery : Screen(
         route = "gallery",
-        label = "Gallery"
+        label = "gallery"
+    )
+
+    object Swipe : Screen(
+        route = "swipe",
+        label = "swipe"
     )
 }

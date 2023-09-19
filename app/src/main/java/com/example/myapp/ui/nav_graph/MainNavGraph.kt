@@ -1,19 +1,22 @@
 package com.example.myapp.ui.nav_graph
 
 import androidx.compose.runtime.Composable
-import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
-import com.example.myapp.MainViewModel
 import com.example.myapp.ui.Screen
 import com.example.myapp.ui.screens.main.MainScreen
 import com.example.myapp.ui.screens.main.home.HomeScreen
+import com.example.myapp.ui.screens.main.notification.AnimationScreen
+import com.example.myapp.ui.screens.main.notification.ExoPlayerScreen
 import com.example.myapp.ui.screens.main.notification.NotificationScreen
-import com.example.myapp.ui.screens.main.profile.StatsScreen
+import com.example.myapp.ui.screens.main.notification.PushNotificationScreen
+import com.example.myapp.ui.screens.main.notification.WebScreen
+import com.example.myapp.ui.screens.main.profile.DragAndDropScreen
+import com.example.myapp.ui.screens.main.profile.GalleryScreen
 import com.example.myapp.ui.screens.main.profile.ProfileScreen
-import org.koin.androidx.compose.getViewModel
-import org.koin.androidx.compose.koinViewModel
+import com.example.myapp.ui.screens.main.profile.StatsScreen
+import com.example.myapp.ui.screens.main.profile.SwipeToDismissScreen
 
 @Composable
 fun MainNavGraph(navController: NavHostController) {
@@ -39,6 +42,34 @@ fun MainNavGraph(navController: NavHostController) {
         composable(route = Screen.Stats.route) {
             StatsScreen(navController = navController)
         }
+
+
+        composable(route = Screen.Anim.route) {
+            AnimationScreen(navController = navController)
+        }
+
+        composable(route = Screen.Exoplayer.route) {
+            ExoPlayerScreen(navController = navController)
+        }
+        composable(route = Screen.PushNotification.route) {
+            PushNotificationScreen(navController = navController)
+        }
+        composable(route = Screen.Web.route) {
+            WebScreen(navController = navController)
+        }
+
+        composable(route = Screen.DragAndDrop.route) {
+            DragAndDropScreen(navController = navController)
+        }
+
+        composable(route = Screen.Gallery.route) {
+            GalleryScreen(navController = navController)
+        }
+
+        composable(route = Screen.Swipe.route) {
+            SwipeToDismissScreen(navController = navController)
+        }
+
 //        detailsNavGraph(navController = navController)
     }
 }

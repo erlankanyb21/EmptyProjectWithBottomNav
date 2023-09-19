@@ -47,7 +47,7 @@ fun HomeScreen(
 private fun DataList(viewModel: MainViewModel) {
 
     var showSheet by remember { mutableStateOf(false) }
-    var model = remember { mutableStateOf(Test()) }
+    val model = remember { mutableStateOf(Test()) }
 
     if (showSheet) {
         BottomSheet(test = model.value, onDismiss = {
@@ -61,8 +61,7 @@ private fun DataList(viewModel: MainViewModel) {
                 horizontal = 40.dp,
                 vertical = 60.dp
             )
-            .fillMaxWidth()
-            .clickable { },
+            .fillMaxWidth(),
         horizontalAlignment = Alignment.Start
     ) {
         items(items = viewModel.state.value) {
@@ -145,7 +144,7 @@ fun BottomSheet(onDismiss: () -> Unit, test: Test) {
                             alignment = Alignment.TopCenter,
                             model = test.image,
                             contentDescription = "",
-                            loading = { CircularProgressIndicator(modifier = Modifier.fillMaxSize()) }
+                            loading = { CircularProgressIndicator() }
                         )
                     }
                 }

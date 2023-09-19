@@ -1,7 +1,11 @@
 package com.example.myapp.ui.screens.main.notification
 
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.windowInsetsPadding
+import androidx.compose.material3.Button
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -13,10 +17,25 @@ import androidx.navigation.NavController
 fun NotificationScreen(
     navController: NavController
 ) {
-    Box(
-        contentAlignment = Alignment.Center,
-        modifier = Modifier.fillMaxSize()
+    Column(
+        Modifier.fillMaxSize(),
+        verticalArrangement = Arrangement.Center,
+        horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        Text(text = "Notifications", color = Color.Black)
+        Button(onClick = { /*TODO*/ }) {
+            Text(text = "Push notification")
+        }
+
+        Button(onClick = { /*TODO*/ }) {
+            Text(text = "Web view")
+        }
+
+        Button(onClick = { /*TODO*/ }) {
+            Text(text = "Animations")
+        }
+
+        Button(onClick = { /*TODO*/ }) {
+            Text(text = "Exo player")
+        }
     }
 }
